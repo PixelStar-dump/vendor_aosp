@@ -235,10 +235,11 @@ PRODUCT_PACKAGE_OVERLAYS += \
 
 # RRO overlay
 PRODUCT_PACKAGES += \
-    NoCutoutOverlay
+    NoCutoutOverlay \
     AndroidBlackTheme \
     DocumentsUIOverlay \
-    NetworkStackOverlay 
+    NetworkStackOverlay \
+    DummyCutoutOverlay
 
 # TextClassifier
 PRODUCT_PACKAGES += \
