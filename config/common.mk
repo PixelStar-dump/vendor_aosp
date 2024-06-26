@@ -233,17 +233,12 @@ PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
 PRODUCT_PACKAGE_OVERLAYS += \
     vendor/aosp/overlay/common
 
-# Cutout control overlay
+# RRO overlay
 PRODUCT_PACKAGES += \
     NoCutoutOverlay
-
-PRODUCT_PACKAGES += \
-    AndroidBlackThemeOverlay \
-    CustomFontPixelLauncherOverlay \
+    AndroidBlackTheme \
     DocumentsUIOverlay \
-    NetworkStackOverlay \
-    ThemedIconsOverlay \
-    NavigationBarNoHintOverlay
+    NetworkStackOverlay 
 
 # TextClassifier
 PRODUCT_PACKAGES += \
