@@ -273,6 +273,9 @@ CUSTOM_LOCALES += \
     cy_GB \
     fur_IT
 
+# Vendor configurations
+$(call inherit-product, vendor/custom/config.mk)
+
 include vendor/aosp/config/version.mk
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
