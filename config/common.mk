@@ -2,13 +2,8 @@
 $(call inherit-product-if-exists, vendor/extra/product.mk)
 
 # Google Apps
-$(call inherit-product, vendor/gms/products/gms.mk)
+$(call inherit-product, vendor/google/gms/products/gms.mk)
 
-# custom prebuilts
-$(call inherit-product, vendor/custom-prebuilts/config.mk)
-
-#Pixel Frameworks
-$(call inherit-product, vendor/pixel-framework/config.mk)
 
 PRODUCT_BRAND ?= ThePixelProject
 
@@ -150,10 +145,6 @@ include vendor/aosp/config/bootanimation.mk
 PRODUCT_PACKAGES += \
     BtHelper
 
-# Build Manifest
-PRODUCT_PACKAGES += \
-    build-manifest
-
 # Charger
 PRODUCT_PACKAGES += \
     charger_res_images \
@@ -248,9 +239,23 @@ PRODUCT_PACKAGE_OVERLAYS += \
 
 # RRO overlay
 PRODUCT_PACKAGES += \
-    AndroidBlackTheme \
+    AndroidBlackThemeOverlay \
     DocumentsUIOverlay \
-    DummyCutoutOverlay
+    DummyCutoutOverlay \
+    NoCutoutOverlay \
+    AOSPASettingsOverlay 
+
+# SystemUI Customisation
+PRODUCT_PACKAGES += \
+    SystemUICustomOverlay
+
+# Settings Customisation
+PRODUCT_PACKAGES += \
+    SettingsCustomOverlay
+
+# SettingsProvider Customisation
+PRODUCT_PACKAGES += \
+    SettingsProviderOverlay
 
 PRODUCT_PACKAGES += \
     SystemUIFlagFlipper
