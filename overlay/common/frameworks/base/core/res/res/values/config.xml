@@ -27,15 +27,6 @@
     <!-- Name of the font family to use in the default lockscreen clock -->
     <string name="config_clockFontFamily" translatable="false">google-sans-clock</string>
 
-        <!-- Set this to true to enable the platform's auto-power-save modes like doze and
-         app standby.  These are not enabled by default because they require a standard
-         cloud-to-device messaging service for apps to interact correctly with the modes
-         (such as to be able to deliver an instant message to the device even when it is
-         dozing).  This should be enabled if you have such services and expect apps to
-         correctly use them when installed on your device.  Otherwise, keep this disabled
-         so that applications can still use their own mechanisms. -->
-    <bool name="config_enableAutoPowerModes">true</bool>
-
     <!-- Name of a font family to use for body text. -->
     <string name="config_bodyFontFamily">google-sans-text</string>
     <string name="config_bodyFontFamilyMedium">google-sans-text-medium</string>
@@ -45,9 +36,6 @@
     <string name="config_headlineFontFamilyMedium">google-sans-medium</string>
     <string name="config_headlineFontFeatureSettings">ss03</string>
 
-    <!-- Flag indicating whether we should enable smart battery. -->
-    <bool name="config_smart_battery_available">true</bool>
-
     <!-- Enable Night display, which requires HWC 2.0. -->
     <bool name="config_nightDisplayAvailable">true</bool>
 
@@ -55,25 +43,4 @@
          in hardware. -->
     <bool name="config_setColorTransformAccelerated">true</bool>
 
-    <!-- Maximum velocity to initiate a fling, as measured in dips per second. -->
-    <dimen name="config_viewMaxFlingVelocity">12000dp</dimen>
-
-    <!-- If this is true, long press on power button will be available from a
-         non-interactive state. -->
-    <bool name="config_supportLongPressPowerWhenNonInteractive">true</bool>
-
-    <!--  Whether Multiuser UI should be shown -->
-    <bool name="config_enableMultiUserUI">true</bool>
-
-    <!--  Maximum number of supported users -->
-    <integer name="config_multiuserMaximumUsers">4</integer>
-
-   <!-- Set icon mask to circle -->
-   <string name="config_icon_mask" translatable="false">"M50 0A50 50,0,1,1,50 100A50 50,0,1,1,50 0"</string>
-
-    <!-- Enable lockscreen rotation by default -->
-    <bool name="config_enableLockScreenRotation">true</bool>
-    
-    <!-- Default value for performant auth feature. -->
-    <bool name="config_performantAuthDefault">true</bool>
 </resources>
