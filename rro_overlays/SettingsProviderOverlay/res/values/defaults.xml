@@ -34,9 +34,6 @@
     <!-- Enable UI touch haptic feedback by default -->
     <bool name="def_haptic_feedback">true</bool>
 
-    <!-- Speed up the animations -->
-    <fraction name="def_window_transition_scale">50%</fraction>
-
     <!-- This is disabled by default, but turned on in SetupWizard -->
     <bool name="assisted_gps_enabled">false</bool>
 </resources>

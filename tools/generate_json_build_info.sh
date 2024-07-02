@@ -7,7 +7,7 @@ if [ "$1" ]; then
     echo "Generating .json"
     file_path=$1
     file_name=$(basename "$file_path")
-    DEVICE=$(echo $TARGET_PRODUCT | sed 's/PixelProject_//g')
+    DEVICE=$(echo $TARGET_PRODUCT | sed 's/aosp_//g')
     if [ -f $file_path ]; then
         # only generate for official builds. unless forced with 'export FORCE_JSON=1'
         if [[ $file_name == *"Official"* ]] || [[ $FORCE_JSON == 1 ]]; then
@@ -18,8 +18,8 @@ if [ "$1" ]; then
             md5=$(md5sum $file_path | awk '{ print $1 }');
             datetime=$(grep ro\.build\.date\.utc ./out/target/product/$DEVICE/system/build.prop | cut -d= -f2);
             id=$(cat "$file_path.sha256sum" | cut -d' ' -f1);
-            build_type=$(grep ro\.custom\.buildtype ./out/target/product/$DEVICE/system/build.prop | cut -d= -f2);
-            base_version=$(grep ro\.custom\.base\.version ./out/target/product/$DEVICE/system/build.prop | cut -d= -f2);
+            build_type=$(grep org\.pixelproject\.buildtype ./out/target/product/$DEVICE/system/build.prop | cut -d= -f2);
+            base_version=$(grep org\.pixelproject\.base\.version ./out/target/product/$DEVICE/system/build.prop | cut -d= -f2);
             link="https://sourceforge.net/projects/pixel-project/files/${DEVICE}/${file_name}/download"
             echo "{" > $file_path.json
             echo "  \"response\": [" >> $file_path.json
