@@ -29,12 +29,10 @@ bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
 	$(hide) $(SHA256) $(CUSTOM_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(CUSTOM_TARGET_PACKAGE).sha256sum
 	@echo -e ${CL_CYN}""${CL_CYN}
 	@echo -e ${CL_PRP}""${CL_CYN}
-	@echo -e ${CL_CYN}"  _____ _______   ________ _        _____  _____   ____       _ ______ _____ _______ "${CL_CYN}
-	@echo -e ${CL_CYN}" |  __ \_   _\ \ / /  ____| |      |  __ \|  __ \ / __ \     | |  ____/ ____|__   __|"${CL_CYN}
-	@echo -e ${CL_CYN}" | |__| || |  \ V /| |__  | |      | |__| | |__| | |  | |    | | |__ | |       | |   "${CL_CYN}
-	@echo -e ${CL_CYN}" |  ___/ | |   > < |  __| | |      |  ___/|  _  /| |  | |_   | |  __|| |       | |   "${CL_CYN}
-	@echo -e ${CL_CYN}" | |    _| |_ / . \| |____| |____  | |    | | \ \| |__| | |__| | |___| |____   | |   "${CL_CYN}
-	@echo -e ${CL_CYN}" |_|   |_____/_/ \_\______|______| |_|    |_|  \_\\____/ \____/|______\_____|  |_|   "${CL_CYN}
+	@echo -e ${CL_CYN}"  ___ _____  _____ _      ___ ___  ___     _ ___ ___ _____ "${CL_CYN}
+	@echo -e ${CL_CYN}" | _ \_ _\ \/ / __| |    | _ \ _ \/ _ \ _ | | __/ __|_   _|"${CL_CYN}
+	@echo -e ${CL_CYN}" |  _/| | >  <| _|| |__  |  _/   / (_) | || | _| (__  | |  "${CL_CYN}
+	@echo -e ${CL_CYN}" |_| |___/_/\_\___|____| |_| |_|_\\___/ \__/|___\___| |_|  "${CL_CYN}
 	@echo -e ${CL_CYN}""${CL_CYN}
 	@echo -e ${CL_CYN}""${CL_CYN}
 	echo -e ${CL_BLD}${CL_RED}"===============================-Package complete-==============================="${CL_RED}
