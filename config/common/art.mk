@@ -3,17 +3,17 @@ ifeq ($(TARGET_BUILD_VARIANT), user)
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
 PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
 WITH_DEXPREOPT_DEBUG_INFO := false
-ART_BUILD_TARGET_NDEBUG := false
+ART_BUILD_TARGET_NDEBUG := true
 ART_BUILD_TARGET_DEBUG := false
-ART_BUILD_HOST_NDEBUG := false
+ART_BUILD_HOST_NDEBUG := true
 ART_BUILD_HOST_DEBUG := false
 USE_DEX2OAT_DEBUG := false
 endif
 
 # Dex preopt
 PRODUCT_DEXPREOPT_SPEED_APPS += \
-    Settings \
-    SystemUI
+    SettingsGoogle \
+    SystemUIGoogle
 
 # Enable whole-program R8 Java optimizations for SystemUI and system_server,
 # but also allow explicit overriding for testing and development.
@@ -55,15 +55,6 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
     pm.dexopt.cmdline=verify \
     pm.dexopt.inactive=verify \
     pm.dexopt.shared=speed
-
-# dex2oat threads and CPU sets (default)
-PRODUCT_SYSTEM_EXT_PROPERTIES += \
-    dalvik.vm.boot-dex2oat-cpu-set=0,1,6,7 \
-    dalvik.vm.boot-dex2oat-threads=4 \
-    dalvik.vm.dex2oat-cpu-set=0,1,6,7 \
-    dalvik.vm.dex2oat-threads=4 \
-    dalvik.vm.image-dex2oat-cpu-set=0,1,6,7 \
-    dalvik.vm.image-dex2oat-threads=4
 
 # Enable 64Bit dex2oat
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
