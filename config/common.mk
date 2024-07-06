@@ -222,10 +222,10 @@ PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
 endif
 endif
 
-# SystemUI
+# DEXPREOPT
 PRODUCT_DEXPREOPT_SPEED_APPS += \
-    CarSystemUI \
-    SystemUI
+    SystemUIGoogle \
+    NexusLauncherRelease
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     dalvik.vm.systemuicompilerfilter=speed
