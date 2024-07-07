@@ -24,14 +24,14 @@ if [ "$1" ]; then
             echo "{" > $file_path.json
             echo "  \"response\": [" >> $file_path.json
             echo "    {" >> $file_path.json
+            echo "      \"error\": \"false\","
+            echo "      \"version\": \"${base_version}\"," >> $file_path.json
+            echo "      \"filename\": \"${file_name}\"," >> $file_path.json
             echo "      \"datetime\": ${datetime}," >> $file_path.json
             echo "      \"size\": ${file_size}," >> $file_path.json
-            echo "      \"filehash\": \"${md5}\"," >> $file_path.json
-            echo "      \"filename\": \"${file_name}\"," >> $file_path.json
-            echo "      \"id\": \"${id}\"," >> $file_path.json
-            echo "      \"romtype\": \"${build_type}\"," >> $file_path.json
-            echo "      \"version\": \"${base_version}\"," >> $file_path.json
             echo "      \"url\": \"${link}\"" >> $file_path.json
+            echo "      \"filehash\": \"${md5}\"," >> $file_path.json
+            echo "      \"id\": \"${id}\"," >> $file_path.json
             echo "    }" >> $file_path.json
             echo "  ]" >> $file_path.json
             echo "}" >> $file_path.json
